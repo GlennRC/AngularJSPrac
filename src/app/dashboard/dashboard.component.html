@@ -1,13 +1,10 @@
-<div class="custom-card card">
-  <div class="card-block">
-      <h4 class="card-title">{{title}}</h4>
-      <div class="list-group">
-        <a class="list-group-item list-group-item-action" 
-          *ngFor="let hero of heroes"
-          [routerLink]="['/detail', hero.id]"
-          class="col-1-4">
-          {{hero.name}}
-        </a>
-      </div>
+<div class="container">
+  <h4>{{title}}</h4>
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action" 
+      *ngFor="let hero of heroes"
+      [routerLink]="['/detail', hero.id]">
+      {{hero.name}}
+    </a>
   </div>
 </div>
