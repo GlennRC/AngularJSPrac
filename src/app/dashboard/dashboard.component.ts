@@ -18,6 +18,12 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1,5));
+      .then(heroes => this.heroes = heroes.slice(1,5))
+      .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); //for demo purposes
+    return Promise.reject(error.message || error);
   }
 }
