@@ -1,0 +1,24 @@
+<div *ngIf="hero">
+    <div class="custom-card card">
+        <div class="card-block">
+            <h4 class="card-title">{{hero.name}} details!</h4>
+            <div class="row">
+                <div class="col-md-1">
+                    <label class="card-text">Id:</label>
+                </div>
+                <div class="col-md">
+                    <label class="card-text">{{hero.id}}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <label class="card-text">Name:</label>
+                </div>
+                <div class="col-md">
+                    <input placeholder="name" [(ngModel)]="hero.name"/>
+                </div>
+            </div>
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+
+<!--The content below is only a placeholder and can be replaced. -->
+<div *ngIf="selectedHero">
+  <div class="custom-card card">
+      <div class="card-block">
+          <h4 class="card-title">{{selectedHero.name | uppercase}} is my hero</h4>
+          <button class="btn btn-primary" click="gotoDetails()">View Details</button>
+      </div>
+  </div>
+</div>
+
+<div class="contianer">
+  <ul class="heroes list-group">
+    <li class="list-group-item list-group-item-action" 
+        *ngFor="let hero of heroes" 
+        [class.active]="hero === selectedHero" 
+        (click)="onSelect(hero)">
+      <span class="badge badge-default">{{hero.id}}</span>{{hero.name}}
+    </li>
+  </ul>
+</div>
